@@ -1,0 +1,107 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 62.5%;
+  background-color: #131313;
+}
+
+h1{
+  color: White;
+  position: absolute;
+  top: 10%;
+}
+
+.face{
+  position: absolute;
+  height : 25rem;
+  width: 25rem;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; 
+  background-color:rgb(187, 159, 108);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  position: relative;
+  width: 5.3rem;
+  height: 5rem;
+  background-color: white; /* eye color, you can customize */
+  transform: rotate(-45deg);
+  margin: 5rem auto;
+}
+
+.eye1,
+.eye2 {
+  content: '';
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: white; /* eye color, same as the main shape */
+  border-radius: 50%;
+}
+
+.eye1{
+  top: -50px;
+  left: 0;
+}
+
+.eye2{
+  top: 0;
+  left: 50px;
+}
+
+.eyeAfter{
+  background-color: red;
+}
+
+.btn{
+  position:relative;
+  height: 2.5rem;
+  width: 5rem;
+  background-color: rgb(216, 62, 230);
+  top: 40%;
+  display: flex;
+  outline: none;
+  color: aliceblue;
+  font-size: 2rem;
+}
+
+.btnOn{
+  position: absolute;
+  background-color: green;
+  height: 100%;
+  width: 75%;
+  left: 0;
+  text-align: right;
+  font-size: 2rem;
+  color: white;
+  border-right: 2px solid black;
+}
+
+.btnOff{
+  text-align: left;
+  border-left: 2px solid black;
+  position: absolute;
+  background-color: red;
+  height: 100%;
+  width: 75%;
+  right: 0;
+}
+
+
+/* .myInput{
+  position: absolute;
+  right: 0;
+} */
