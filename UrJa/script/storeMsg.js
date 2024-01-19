@@ -25,7 +25,7 @@ for (let item = 0; item < contactData.contacts.length; item++) {
   });
 }
 
-console.log(id);
+
 
 const textMsgBox = document.querySelector(".textMsgBox");
 const textInput = textMsgBox.textContent;
@@ -38,8 +38,7 @@ for (let item = 0; item < contactData.contacts.length; item++) {
     };
 
     contactsMsgs.msg[id - 1].sendMsgArray.push(messageSendObject);
-    
-    console.log(id);
+    console.log(contactsMsgs);
   }
 
   chatSendButton.addEventListener("click", handleChatSend);
@@ -58,9 +57,8 @@ for (let item = 0; item < contactData.contacts.length; item++) {
       text: "krishna",
       timeStamp: `${new Date().toLocaleTimeString({ hour: "2-digit" })}`,
     };
+    contactsMsgs.msg[id - 1].recieveMsgArray.push(messageRecieveObject);
     console.log(id);
-    //contactsMsgs.msg[id - 1].recieveMsgArray.push(messageRecieveObject);
-    
   }
   handleChatRecieve();
   break;
