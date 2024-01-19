@@ -1,0 +1,144 @@
+
+.homeSection {
+  height: 75%;
+  width: 29.5%;
+  bottom: 1rem;
+  position: fixed;
+  right: 1rem;
+  margin-right: 0.5%;
+  background-color: #131313;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 11% 7% 82%;
+  background-image: url(logo.jpeg);
+}
+
+.homeSection--Bar {
+  color: white;
+  font-size: 3rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  align-items: center;
+}
+
+.homeSection--barLogo {
+  height: 100%;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 1rem;
+}
+
+.homeSection--barIcon {
+  height: 100%;
+  right: 0;
+  padding-top: 1rem;
+  cursor: pointer;
+}
+
+.homeSection--search {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeSection--searchBox {
+  height: 100%;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  outline: none;
+}
+.homeSection--searchIcon {
+  height: 100%;
+  cursor: pointer;
+  background-color: olive;
+  color: antiquewhite;
+  border: none;
+}
+
+.homeSection--searchIcon:hover:active {
+  transform: scale(0.95);
+}
+
+.homeSection--list {
+  background-color: aliceblue;
+  overflow-y: scroll;
+  background-color: burlywood;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.homeSection--contacts {
+  height: 11%;
+  width: 90%;
+  border-radius: 1rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  font-size: 2rem;
+  color: #131313;
+  margin: 1rem;
+  cursor: pointer;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.homeSection--contactsLogo {
+  font-size: larger;
+  color: white;
+  background-color: #131313;
+  background-size: cover;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem 0 ;
+}
+
+.homeSection--contactsInfo{
+  background-color: aqua;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  
+}
+
+.homeSection--contactsName{
+  font-size: 2rem;
+  padding-left: 1rem;
+
+}
+
+.homeSection--contactsEmail{
+  position: relative;
+  font-size: 1rem;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.homeSection--contactsLogo:active:hover,
+.homeSection--contactsInfo:active:hover {
+  background-color: olive;
+  transform: scale(0.98);
+}
+#homeSection--importContacts{
+  height: 5%;
+  width: 2.5%;
+  background-color: green;
+  bottom: 2rem;
+  right: 2rem;
+  position: fixed;
+  border-radius: 1rem;
+  color: aliceblue;
+  padding-left: 0.3%;
+  cursor: pointer;
+
+}
+
+.disappearContacts{
+  height: 0;
+  width: 0;
+  display: none;
+}

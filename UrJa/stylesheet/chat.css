@@ -1,0 +1,201 @@
+.chatSection {
+  height: 75%;
+  width: 68.1%;
+  bottom: 1rem;
+  background-color: #131313;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 10% 83 7%;
+  position: fixed;
+}
+
+.chatNavBox {
+  height: 10%;
+  width: 68.1%;
+  background-image: linear-gradient(to right, blue, white, blue);
+  position: fixed;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  display: grid;
+  grid-template-columns: 10% 75% 15%;
+  padding: 0.5rem;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.chatNavBox--dp {
+  color: antiquewhite;
+  font-weight: bolder;
+  text-align: center;
+  height: 80%;
+  width: 40%;
+  border-radius: 50%; 
+  background-color: #131313;
+  background-size: cover;
+  margin-left: 1rem;
+}
+
+.disappearText{
+  font-size: 0;
+}
+.ChatNavBox--name {
+  height: 100%;
+  width: 100%;
+}
+
+.ChatNavBox--tool {
+  color: white;
+}
+
+.iconCall,
+.iconVideoCall,
+.iconSetting,
+.iconMore {
+  color: aliceblue;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.chatMsgBox {
+  height: 83%;
+  width: 100%;
+  background-color: #131313;
+  position: absolute;
+  top: 11%;
+  scroll-behavior: smooth;
+  font-size: 1.5rem;
+  background-image: url(background.jpg);
+  background-size: cover;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+  
+  
+
+
+}
+.msg--recieveBox,
+.msg--sendBox{
+  width: 100%;
+  position: relative;
+  margin-top: 0.5rem;  
+}
+
+.msg--sendBox{
+  display: flex;
+  justify-content: end;
+  margin-left: 1rem;
+}
+
+.msg--recieveBox{
+  margin-right: 1.5rem;
+}
+
+.msg--recieve,
+.msg--send{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  padding: 0 0.5rem;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.msg--recieve-text{
+  padding: 0.5rem;
+  position: relative;
+  height: auto;
+}
+
+.msg--send-text{
+  padding: 0.5rem;
+  text-align: right;
+  position: relative;
+  height: auto;
+}
+
+.msg--send-time,
+.msg--recieve-time {
+  position: relative;
+  color: #131313;
+  font-size: 0.8rem;
+  text-align: right;
+  padding-right: 0.3rem;
+  height: auto;
+}
+
+.msg--recieve{
+  background-color: white;
+  margin-left: 1rem;
+}
+
+.msg--send {
+  background-color: aqua;
+  margin-right: 1.5rem;
+}
+
+.chatInputBox {
+  height: 9%;
+  width: 68.1%;
+  bottom: 0.8rem;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 15% 75% 10%;
+  position: fixed;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  font-size: 4rem;
+}
+
+.iconBox {
+  color: azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 1rem;
+  cursor: pointer;
+  background-color: olivedrab;
+  border-bottom-left-radius: 1rem;
+}
+
+.attachIconBox:hover:active,
+.micIconBox:hover:active,
+.addIconBox:hover:active {
+  font-weight: 700;
+  color: red;
+  transform: scale(0.95);
+}
+.msgInputBox {
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+}
+.textMsgBox {
+  height: 100%;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  outline: none;
+  bottom: 0.5rem;
+}
+
+.sentButtonBox {
+  color: white;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-bottom-right-radius: 1rem;
+}
+.sentButton {
+  size: 40rem;
+}
+
+.sentButtonBox:hover:active {
+  font-weight: 900;
+  transform: scale(0.9);
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}

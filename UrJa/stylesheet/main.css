@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 5, 110),
+    rgb(78, 74, 74),
+    maroon
+  );
+  user-select: none;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgb(5, 5, 110),
+    rgb(78, 74, 74),
+    maroon
+  );
+  display: grid;
+  grid-template-rows: 20% 80%;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+
+/* chat body part */
+
+.mainSection {
+  position: absolute;
+  height: 75%;
+  width: 98%;
+  bottom: 1rem;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+

@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to left,#711DB0,#C21292,#EF4040,#C21292,#711DB0);
+  filter: blur(40%);
+  user-select: none;
+}
+
+.mainContainer{
+  height:90%;
+  width: 60%;
+  background-image: linear-gradient(to left,#756AB6,#AC87C5,#E0AED0,#FFE5E5);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.logo{
+  background-color: black;
+  position: relative;
+  height: 30%;
+  width: 20%;
+  border-radius: 50%; 
+  background-image: url("logo.jpg");
+  background-size: cover;
+  border: 5px solid black;
+}
+
+.intro{
+  height:20%;
+  font-size: 7rem;
+  color: white;
+}
+
+.attach{
+  height: 20%;
+  width: 90%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+
+.loginButton,
+.registrationButton{
+  position: relative;
+  height: 40%;
+  font-size: 3rem;
+  color: antiquewhite;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
+  
+  padding: 0 1rem ;
+  
+}
+
+.loginButton{
+  background-color: rgb(9, 231, 9);
+  text-decoration:  none;
+}
+
+.registrationButton{
+ background-color: rgb(3, 51, 9);
+ text-decoration:  none;
+}
+
+             /* Login Page Css */
+
+.textLoginPage{
+  
+  position: relative;
+  font-size: 11rem;
+  border-radius: 50%; 
+
+}             
+
+.container,
+form{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.inputContainer{
+  position: relative;
+  height: 10%;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: aliceblue;
+  margin-bottom: 2rem;
+}
+
+.inputName{
+  background-color: #131313;
+  color: antiquewhite;
+  font-size: 3rem;
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.inputId{
+  padding-left: 3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  outline: none;
+}
+
+.inputPassword{
+  padding-left: 3rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  outline: none;
+}
+
+.inputResetButton,
+.inputSubmitButton{
+  margin-top: 5rem;
+  margin-left: 3rem;
+  font-size: 2rem;
+  background-color: maroon;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.inputSubmitButton{
+  background-color: green;
+}
+
+                     /* Registration Page Css */
+
+.container,
+form{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}                     
+
+.inputDataRegistration{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-radius: 1rem;
+  outline: none;
+  text-decoration: none;
+  width: 80%;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.inputText{
+  background-color: #131313;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+  color: aliceblue;
+  padding-left: 1rem;
+}
+
+input{
+  outline: none;
+  font-size: 2rem;
+  padding-left: 2rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+form{
+  height: 90%;
+  width: 90%;
+  border: 2px solid black;
+}
+
+.resetButtonRegister,
+.submitButtonRegister{
+  margin-left: 7rem;
+  font-size: 2.5rem;
+  background-color: maroon;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.submitButtonRegister{
+  background-color: green;
+}
+
+

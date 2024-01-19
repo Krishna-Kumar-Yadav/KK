@@ -1,0 +1,54 @@
+.navSection {
+  height: 20%;
+  width: 98%;
+  background-color: #131313;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.commonNav {
+  color: White;
+  font-size: 1.8rem;
+  margin-right: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.commonNav--text:hover {
+  text-decoration: underline;
+}
+.commonNav:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+.commonNav:active {
+  transform: scale(0.95);
+}
+
+.friendNav {
+  font-size: 2.3rem;
+}
+
+.blockNav {
+  color: red;
+}
+
+.menuNav {
+  margin-right: 11%;
+}
+
+.logoNav {
+  height: 100%;
+  width: 9%;
+  right: 0rem;
+  border-radius: 50%;
+  background-image: url("logo.jpg");
+  background-size: cover;
+}
