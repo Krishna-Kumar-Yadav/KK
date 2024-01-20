@@ -39,7 +39,7 @@ body{
   height: 30%;
   width: 20%;
   border-radius: 50%; 
-  background-image: url("logo.jpeg");
+  background-image: url("logo.jpg");
   background-size: cover;
   border: 5px solid black;
 }

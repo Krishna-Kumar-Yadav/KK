@@ -3,7 +3,7 @@
   height: 75%;
   width: 29.5%;
   bottom: 1rem;
-  position: relative;
+  position: fixed;
   right: 1rem;
   margin-right: 0.5%;
   background-color: #131313;
