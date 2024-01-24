@@ -64,15 +64,15 @@ function send() {
 
 const recieveMsgArr = [
   {
-    text: "krishna yadav",
+    text: "",
     timeStamp: `${new Date().toLocaleTimeString({ hour: "2-digit" })}`,
   },
   {
-    text: "vikas yadav",
+    text: "",
     timeStamp: `${new Date().toLocaleTimeString({ hour: "2-digit" })}`,
   },
   {
-    text: "akshay yadav",
+    text: "",
     timeStamp: `${new Date().toLocaleTimeString({ hour: "2-digit" })}`,
   },
 ];
@@ -120,25 +120,27 @@ checkRecieveEmptyText();
 //chat Handle with contact
 
 function chatHandleClick() {
-  const contactsMsgs = {
-    msg: [],
-  };
+  const msg = JSON.parse(localStorage.getItem("msgs")) || { msg: [] };
+  
   let chatSendButton = document.querySelector(".sentButtonBox");
   let chatMsgBox = document.querySelector(".chatMsgBox");
   let id;
 
   for (let item = 0; item < contactData.contacts.length; item++) {
     const contactN = document.getElementById(`contact${item + 1}`);
-    const msgObject = {
+    
+    if(!msg.msg[item]){
+      msg.msg[item] = {
       id_No: item + 1,
       recieveMsgArray: [],
       sendMsgArray: [],
     };
-    contactsMsgs.msg[item] = msgObject;
+  }
+  let sendMsgId = document.querySelector(".textMsgBox");
 
     contactN.addEventListener("click", function () {
+      sendMsgId.value = "";
       id = item + 1;
-      console.log(id);
       handleChatSend(id);
       handleChatRecieve(id);
       chatMsgBox.innerHTML = "";
@@ -147,7 +149,7 @@ function chatHandleClick() {
   let sendMsgText;
   function handleChatSend(contactId) {
     let sendMsgId = document.querySelector(".textMsgBox");
-    sendMsgText = sendMsgId.value.trim();
+    sendMsgText = sendMsgId.value;
 
     const messageSendObject = {
       text: sendMsgText,
@@ -159,9 +161,9 @@ function chatHandleClick() {
       messageSendObject.text !== "" &&
       messageSendObject.text !== undefined
     ) {
-      contactsMsgs.msg[contactId - 1].sendMsgArray.push(messageSendObject);
+      msg.msg[contactId - 1].sendMsgArray.push(messageSendObject);
     }
-    console.log(contactsMsgs);
+    saveContactsMsgsToLocalStorage(msg);
   }
 
   function handleChatRecieve(contactId) {
@@ -174,30 +176,64 @@ function chatHandleClick() {
       messageRecieveObject.text !== "" &&
       messageRecieveObject.text !== undefined
     ) {
-      contactsMsgs.msg[contactId - 1].recieveMsgArray.push(
-        messageRecieveObject
-      );
+      msg.msg[contactId - 1].recieveMsgArray.push(messageRecieveObject);
     }
+    saveContactsMsgsToLocalStorage(msg);
   }
   const textMsgBox = document.querySelector(".textMsgBox");
 
   chatSendButton.addEventListener("click", function () {
     handleChatSend(id);
-    saveContactsMsgsToLocalStorage(contactsMsgs);
+    //saveMessagesToServer(msg);
   });
 
   textMsgBox.addEventListener("keydown", function buttonEnter(e) {
     if (e.key === "Enter") {
       handleChatSend(id);
-      saveContactsMsgsToLocalStorage(contactsMsgs);
+      //saveMessagesToServer(msg);
     }
   });
 }
+let stringData;
+async function saveContactsMsgsToLocalStorage(data) {
+  stringData = JSON.stringify(data);
+  localStorage.setItem("msgs", stringData);
 
-function saveContactsMsgsToLocalStorage(data) {
-  let stringData = JSON.stringify(data)
-  localStorage.setItem("contactsMsgs", stringData);
-  
 }
 
 chatHandleClick();
+
+//message to file
+
+function saveDataToFile(data, filename) {
+  const blob = new Blob([data], { type: 'json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+}
+
+const addDataFile = document.querySelector('.addIconBox');
+  addDataFile.addEventListener("click",function (){
+    saveDataToFile(stringData, 'chatMessages.json');
+  })
+
+//message to server
+
+/* function saveMessagesToServer(data) {
+  fetch('http://127.0.0.1:3000/saveMessages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  })
+    .then(response => response.text())
+    .then(message => console.log(message))
+    .catch(error => console.error(error));
+}
+ */
+
