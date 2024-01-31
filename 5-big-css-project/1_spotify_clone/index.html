@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <!-- material icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png"
+    />
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/base.css" />
+    <link rel="stylesheet" href="stylesheets/player.css" />
+    <link rel="stylesheet" href="stylesheets/container.css" />
+    <link rel="stylesheet" href="stylesheets/aside.css" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <link rel="stylesheet" href="stylesheets/nowPlaying.css" />
+  </head>
+  <body>
+    <!-- musics -->
+    <audio src="music/as_it_was.mp3" class="as-it-was"></audio>
+    <!-- secton aside -->
+    <section class="aside">
+      <div class="home__section">
+        <div class="home">
+          <span class="material-symbols-rounded icon--home"> home </span>
+          <p class="icon-name">Home</p>
+        </div>
+
+        <div class="search">
+          <span class="material-symbols-rounded icon--search"> search </span>
+          <p class="icon-name">Search</p>
+        </div>
+      </div>
+      <div class="library__section">
+        <div class="library__heading">
+          <div>
+            <span class="material-symbols-rounded icon--library">
+              library_music
+            </span>
+            <p class="icon-name">Your Library</p>
+          </div>
+          <div>
+            <span class="material-symbols-rounded icon-library--add">
+              add
+            </span>
+            <span class="material-symbols-rounded icon-library--next">
+              arrow_forward
+            </span>
+          </div>
+        </div>
+
+        <div class="library__tags">
+          <div class="tag">
+            <span>Playlists</span>
+          </div>
+          <div class="tag">
+            <span>Artists</span>
+          </div>
+          <div class="tag">
+            <span>Albums</span>
+          </div>
+          <div class="tag">
+            <span>Podcasts</span>
+          </div>
+
+          <span class="material-symbols-rounded icon--slideNext">
+            arrow_forward_ios
+          </span>
+        </div>
+
+        <div class="library__search">
+          <div>
+            <span class="material-symbols-rounded icon--search--mini">
+              search
+            </span>
+          </div>
+          <div class="resentBox">
+            <p>Recents</p>
+            <span class="material-symbols-rounded"> list </span>
+          </div>
+        </div>
+        <div class="library__items">
+          <div class="item--library">
+            <div class="artistImage--library--1"></div>
+            <div class="artistDesc--library">
+              <span>Prateek Kuhad</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--2"></div>
+            <div class="artistDesc--library">
+              <span>Osho Jain</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--3"></div>
+            <div class="artistDesc--library">
+              <span>Justin Bieber</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--4"></div>
+            <div class="artistDesc--library">
+              <span>Arijit Singh</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--5"></div>
+            <div class="artistDesc--library">
+              <span>Atif Aslam</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--6"></div>
+            <div class="artistDesc--library">
+              <span>Kid Laroi</span>
+              <span>Artist</span>
+            </div>
+          </div>
+
+          <div class="item--library">
+            <div class="artistImage--library--7"></div>
+            <div class="artistDesc--library">
+              <span>Ludwig Göransson</span>
+              <span>Artist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section main -->
+    <section class="main">
+      <div class="main__content">
+        <div class="banner__section">
+          <div class="banner__section--top">
+            <div class="navigationBox">
+              <div class="navigationIcon--bg">
+                <span class="material-symbols-rounded icon--navigation">
+                  navigate_before
+                </span>
+              </div>
+              <div class="navigationIcon--bg">
+                <span class="material-symbols-rounded icon--navigation">
+                  navigate_next
+                </span>
+              </div>
+            </div>
+            <div class="banner__section--top--right">
+              <button class="premiumBtn">Explore Premium</button>
+              <button class="downloadBtn">
+                <span class="material-symbols-rounded icon--download">
+                  download </span
+                >Install App
+              </button>
+              <img
+                src="https://i.scdn.co/image/ab67757000003b82f79a7c44d4bb546f67ff0dc6"
+                alt="notification"
+                class="avatar"
+              />
+            </div>
+          </div>
+          <div class="banner__section--shading"></div>
+          <h1 class="banner__section--artistName">Harry Styles</h1>
+          <div class="monthly-Listner-Box">
+            <div>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/7641/7641727.png"
+                alt="verified"
+                class="verified-tick"
+              />
+              <span class="verified-text">Verified Artist</span>
+            </div>
+          </div>
+          <span class="listner">54,087,849 monthly listeners</span>
+        </div>
+        <div class="follow_area">
+          <span class="material-symbols-rounded icon--play--green">
+            play_arrow
+          </span>
+          <button class="followBtn">Follow</button>
+          <span class="material-symbols-rounded icon--more"> more_horiz </span>
+        </div>
+        <div class="popular_area">
+          <h3>Popular</h3>
+          <div class="popular_items">
+            <div class="popular_item">
+              <div class="popular_item_about">
+                <span class="numbering playing">1</span>
+                <div class="popular-img popular-img--1"></div>
+                <p class="playing">As it Was</p>
+              </div>
+              <div class="popular_item_listner">
+                <span>2,911,701,860</span>
+              </div>
+              <div class="popular_item_duration">
+                <img
+                  src="assets/Like.svg"
+                  alt="like"
+                  class="like--icon like--icon--popular"
+                />
+                <span class="duration"> 2:47 </span>
+                <span
+                  class="material-symbols-rounded icon--more icon--more--popular"
+                >
+                  more_horiz
+                </span>
+              </div>
+            </div>
+
+            <div class="popular_item">
+              <div class="popular_item_about">
+                <span class="numbering">2</span>
+               
+                <div class="popular-img popular-img--1"></div>
+                <p class="notPlaying">Late Night Talking</p>
+              </div>
+              <div class="popular_item_listner">
+                <span>2,495,629,821</span>
+              </div>
+              <div class="popular_item_duration">
+                <img
+                  src="assets/Like.svg"
+                  alt="like"
+                  class="like--icon like--icon--popular"
+                />
+                <span class="duration">2:54</span>
+                <span
+                  class="material-symbols-rounded icon--more icon--more--popular"
+                >
+                  more_horiz
+                </span>
+              </div>
+            </div>
+
+            <div class="popular_item">
+              <div class="popular_item_about">
+                <span class="numbering">3</span>
+                
+                <div class="popular-img popular-img--2"></div>
+                <p class="notPlaying">Sign of the Times</p>
+              </div>
+              <div class="popular_item_listner">
+                <span>1,341,732,476</span>
+              </div>
+              <div class="popular_item_duration">
+                <img
+                  src="assets/Like.svg"
+                  alt="like"
+                  class="like--icon like--icon--popular"
+                />
+                <span class="duration"> 5:40 </span>
+                <span
+                  class="material-symbols-rounded icon--more icon--more--popular"
+                >
+                  more_horiz
+                </span>
+              </div>
+            </div>
+
+            <div class="popular_item">
+              <div class="popular_item_about">
+                <span class="numbering">4</span>
+                
+                <div class="popular-img popular-img--2"></div>
+                <p class="notPlaying">Caroline</p>
+              </div>
+              <div class="popular_item_listner">
+                <span>2,911,701,860</span>
+              </div>
+              <div class="popular_item_duration">
+                <img
+                  src="assets/Like.svg"
+                  alt="like"
+                  class="like--icon like--icon--popular"
+                />
+                <span class="duration"> 3:09 </span>
+                <span
+                  class="material-symbols-rounded icon--more icon--more--popular"
+                >
+                  more_horiz
+                </span>
+              </div>
+            </div>
+
+            <div class="popular_item">
+              <div class="popular_item_about">
+                <span class="numbering">5</span>
+                
+                <div class="popular-img popular-img--1"></div>
+                <p class="notPlaying">Grapejuice</p>
+              </div>
+              <div class="popular_item_listner">
+                <span>2,911,701,860</span>
+              </div>
+              <div class="popular_item_duration">
+                <img
+                  src="assets/Like.svg"
+                  alt="like"
+                  class="like--icon like--icon--popular"
+                />
+                <span class="duration"> 3:00 </span>
+                <span
+                  class="material-symbols-rounded icon--more icon--more--popular"
+                >
+                  more_horiz
+                </span>
+              </div>
+            </div>
+            <span class="seeMore">See more</span>
+          </div>
+        </div>
+
+        <!-- discography_area -->
+        <div class="discography_area">
+          <div class="heading_area">
+            <h3 class="secondary__heading">Discography</h3>
+            <span class="showAll">Show all</span>
+          </div>
+
+          <div class="discography_tags">
+            <div class="tag" style="background-color: #fff; color: #000">
+              <span>Popular releases</span>
+            </div>
+            <div class="tag">
+              <span>Albums</span>
+            </div>
+            <div class="tag">
+              <span>Singles and EPs</span>
+            </div>
+          </div>
+          <div class="show_more_blocks_box">
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Harry's house</h4>
+              <p class="show_more_block--description">
+                <span>2022</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.guim.co.uk/img/media/536664f02b65f653393efa763fb4f62791db5a73/0_2319_8708_5224/master/8708.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=62dbeb781c10a9f403b14c8d6b2e2420"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Fine Line</h4>
+              <p class="show_more_block--description">
+                <span>2019</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://images.genius.com/7808c28a7318d798a70dcca90b34846b.1000x1000x1.jpg"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Harry Styles</h4>
+              <p class="show_more_block--description">
+                <span>2017</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.scdn.co/image/ab67616d00001e02828f29c88bf2b2ac07cfd3a7"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Spotify Singles</h4>
+              <p class="show_more_block--description">
+                <span>2017</span>
+                <span>Album</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- featuring_area -->
+        <div class="featuring_area" style="margin-top: 2rem;">
+          <div class="heading_area">
+            <h3 class="secondary__heading">Featuring Harry Styles</h3>
+            <span class="showAll">Show all</span>
+          </div>
+
+          <div class="show_more_blocks_box">
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002f4bb692d1a4ad8ba79f84655"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Harry's house</h4>
+              <p class="show_more_block--description">
+                <span>2022</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://seeded-session-images.scdn.co/v2/img/122/secondary/artist/6KImCVD70vtIoJWnq6nGn3/en"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Fine Line</h4>
+              <p class="show_more_block--description">
+                <span>2019</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002322ba9f72eb9cfe69547918e"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Harry Styles</h4>
+              <p class="show_more_block--description">
+                <span>2017</span>
+                <span>Album</span>
+              </p>
+            </div>
+
+            <div class="show_more_block">
+              <span class="material-symbols-rounded icon--play--green--hover"> play_arrow</span>
+              <img
+                src="https://i.scdn.co/image/ab67706f00000002f36f632265080a76d72c1779"
+                alt="image"
+                class="show_more_block--img"
+              />
+              <h4 class="show_more_block--heading">Spotify Singles</h4>
+              <p class="show_more_block--description">
+                <span>2017</span>
+                <span>Album</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- discography_area -->
+        <div class="discography_area">
+          <div>
+            <h3 class="secondary__heading">Discography</h3>
+            <span class="showAll">Show all</span>
+          </div>
+        </div>
+
+        <!-- discography_area -->
+        <div class="discography_area">
+          <div>
+            <h3 class="secondary__heading">Discography</h3>
+            <span class="showAll">Show all</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section now playing -->
+    <section class="now__playing">
+      <div class="now__playing--top">
+        <h3 class="now__playing--name">As it Was</h3>
+        <img
+          src="assets/equaliser-animated-green.f5eb96f2.gif"
+          alt="playing"
+          class="equaliser"
+        />
+        <span class="material-symbols-rounded icon--close"> close </span>
+      </div>
+      <div class="now__playing--video">
+        <video
+          src="video/as_it_wa_video.mp4"
+          class="referenceVideo"
+          muted="true"
+          loop
+        ></video>
+      </div>
+      <div class="queue__box">
+        <div class="queue__box--top">
+          <h3>Next in queue</h3>
+          <p>Open queue</p>
+        </div>
+        <div class="queue__items">
+          <div class="queue__item">
+            <span class="material-symbols-rounded icon--musicNote">
+              music_note
+            </span>
+            <div class="queue__item__img--1"></div>
+            <div class="queue__desc">
+              <h4>Matermelon Sugar</h4>
+              <span>Harry Styles</span>
+            </div>
+          </div>
+
+          <div class="queue__item">
+            <span class="material-symbols-rounded icon--musicNote">
+              music_note
+            </span>
+            <div class="queue__item__img--2"></div>
+            <div class="queue__desc">
+              <h4>Late Night Talking</h4>
+              <span>Harry Styles</span>
+            </div>
+          </div>
+
+          <div class="queue__item">
+            <span class="material-symbols-rounded icon--musicNote">
+              music_note
+            </span>
+            <div class="queue__item__img--3"></div>
+            <div class="queue__desc">
+              <h4>Sign of the Times</h4>
+              <span>Harry Styles</span>
+            </div>
+          </div>
+
+          <div class="queue__item">
+            <span class="material-symbols-rounded icon--musicNote">
+              music_note
+            </span>
+            <div class="queue__item__img--4"></div>
+            <div class="queue__desc">
+              <h4>Grapejuice</h4>
+              <span>Harry Styles</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- player Section -->
+    <section class="player">
+      <div class="player--left">
+        <div class="currentlyPlaying--img"></div>
+        <div class="currentlyPlaying--about">
+          <p>As it Was</p>
+          <p>harry Styles</p>
+        </div>
+        <img src="assets/Like.svg" alt="like" class="like--icon" />
+      </div>
+
+      <div class="player--middle">
+        <div class="player--middle--top">
+          <img src="assets/Shuffle.svg" alt="Shuffle" />
+          <img
+            src="assets/Previous.svg"
+            alt="Previous"
+            class="icon--previous"
+          />
+          <span class="material-symbols-rounded icon--play"> play_circle </span>
+          <img src="assets/Next.svg" alt="Next" class="icon--next" />
+          <img src="assets/Repeat.svg" alt="Repeat" />
+        </div>
+        <div class="player--middle--bottom">
+          <span class="curruntTime">0:00</span>
+
+          <div class="songLine"></div>
+
+          <span class="totalTime">2:47</span>
+        </div>
+      </div>
+
+      <div class="player--right">
+        <img src="assets/Lyrics.svg" alt="Lyrics" />
+        <img src="assets/Queue.svg" alt="Queue" />
+        <img src="assets/Connect to a device.svg" alt="Connect" />
+        <img src="assets/Volume.svg" alt="Volume" />
+        <div class="volume-line"></div>
+      </div>
+    </section>
+    <script src="scripts/player.js"></script>
+  </body>
+</html>

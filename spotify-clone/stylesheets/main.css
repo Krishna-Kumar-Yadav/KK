@@ -1,0 +1,9 @@
+.main{
+  background-color: #131313;
+  color: white;
+  border-radius: 1rem;
+  height: calc(100vh - 10rem);
+  width: 73%;
+  right: 1rem;
+  position: absolute;;
+}

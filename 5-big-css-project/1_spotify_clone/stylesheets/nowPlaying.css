@@ -1,0 +1,144 @@
+.now__playing {
+  width: 22%;
+  height: calc(100vh - 9.5rem);
+  position: absolute;
+  right: 1rem;
+  background-color: #131313;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.now__playing--top {
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.icon--close {
+  position: absolute;
+  color: #999;
+  right: 1rem;
+  font-size: 2rem;
+}
+
+.now__playing--name {
+  color: #fff;
+  font-family: "circular-normal";
+  font-size: 1.5rem;
+}
+
+.equaliser {
+  width: 1.5rem;
+  display: none;
+}
+
+.now__playing--video {
+  width: 100%;
+  height: 30rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.referenceVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.queue__box {
+  margin-top: 1.5rem;
+  background-color: #232222;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.queue__box--top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.queue__box--top h3 {
+  font-size: 1.6rem;
+  color: #fff;
+  font-family: "circular-normal";
+}
+
+.queue__box--top p {
+  font-size: 1.4rem;
+  color: #999;
+  font-family: "circular-bold";
+}
+
+.queue__items {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.queue__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon--musicNote {
+  color: #999;
+  font-size: 1.8rem;
+}
+
+.queue__desc h4 {
+  font-size: 1.4rem;
+  color: #fff;
+  font-family: "circular-normal";
+}
+
+.queue__desc span {
+  font-size: 1.2rem;
+  color: #999;
+  font-family: "circular-bold";
+}
+
+.queue__item__img--1 {
+  background-image: url(https://i.insider.com/5fbad6c032f2170011f708a5?width=700);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.queue__item__img--2 {
+  background-image: url(https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.queue__item__img--3 {
+  background-image: url(https://images.genius.com/7808c28a7318d798a70dcca90b34846b.1000x1000x1.jpg);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  border-radius: 0.5rem;
+}
+
+.queue__item__img--4 {
+  background-image: url(https://i.scdn.co/image/ab67616d0000b273b46f74097655d7f353caab14);
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+  border-radius: 0.5rem;
+}

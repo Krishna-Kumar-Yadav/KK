@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*::selection{
+  background-color: transparent;
+}
+
+html{
+  font-size: 62.5%;
+  box-shadow: transparent;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right,#003060,#055C9D,#0E86D4,#68BBE3 0.5rem,#055C9D,#003060);
+  color: maroon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* h1{
+  font-size: 5rem;
+  text-decoration: solid;
+  display: flex;
+  font-family: 'Times New Roman', Times, serif;
+} */
+.container{
+  height: 75%;
+  width: 75%;
+  background-image: linear-gradient(to right,#F8C0C8,#D3BBDD,#ECE3F0);
+  border-radius: 1rem;
+  filter: brightness(100%);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.box{
+  height: 30%;
+  width: 18%;
+  background-image: linear-gradient(to right,#055C9D,#003060,#0E86D4,#68BBE3);
+  margin: 0.5rem;
+  margin-inline-start: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/*  .box:hover{ 
+  transition: transform 2s ease-in-out;
+  transform-style:preserve-3d;
+  transform: rotateY(180deg);
+} */
+
+
+.box-Front{
+  color:darkred;
+  font-size: 9rem;
+  padding: 2rem 6rem;
+  position: absolute;
+}
+
+.box-Back{
+  color: darkgreen;
+  font-size: 9rem;
+  padding: 2rem 3rem;
+  position: absolute;
+  display: none;
+  padding-left: 10rem;
+ 
+}
+.box:active{
+  transform: scale(0.9);
+}
+/* .box:hover .front-text{
+  visibility: hidden;
+} */
+
+.visibility{
+  visibility: hidden;
+}
+.turn{
+  transform: rotateX(0deg);
+}
+.rotate{
+  animation: rotateAndHold 10s forwards;
+  display: contents;
+}
+
+@keyframes rotateAndHold{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotateX(180deg);
+  }
+}
+
+.reset--btn{
+  height: 5rem;
+  width: 12rem;
+  background-color: red;
+  font-size: 3rem;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 4%;
+  padding-top: 1rem;
+
+}
+.start--btn{
+  background-color: green;
+  margin-left: 2%;
+}
+
+.reset--btn:active{
+  transform: scale(0.9);
+}
+
+
+

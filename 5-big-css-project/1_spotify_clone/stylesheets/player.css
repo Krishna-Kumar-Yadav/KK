@@ -1,0 +1,135 @@
+.player {
+  width: 98.7%;
+  height: 8rem;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.player div {
+  height: 100%;
+}
+
+.player--left {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.currentlyPlaying--img {
+  width: 5.5rem;
+  background-size: cover;
+  background-image: url(https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f0);
+  border-radius: 0.5rem;
+}
+
+.currentlyPlaying--about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: -0.5rem;
+}
+
+.currentlyPlaying--about p:first-child {
+  font-family: "circular-normal";
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.currentlyPlaying--about p:last-child {
+  font-family: "circular-normal";
+  color: #999;
+  font-size: 1.2rem;
+}
+
+.like--icon {
+  width: 1.7rem;
+  margin-left: 1rem;
+}
+
+.player--middle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding-bottom: 0.6rem;
+  transform: translate(-50%, -50%);
+}
+.player--middle--top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  padding-top: 0.7rem;
+}
+
+.player--middle--top img {
+  width: 1.8rem;
+}
+
+.icon--play {
+  font-size: 4.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.icon--previous,
+.icon--next {
+  width: 1.5rem !important;
+}
+
+.icon--previous:hover,
+.icon--next:hover {
+  cursor: pointer;
+}
+
+.player--middle--bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.songLine {
+  background-color: #6f6f6f;
+  width: 40rem;
+  height: 4px !important;
+  border-radius: 3px;
+}
+
+.songLine::after {
+  content: "";
+  background-color: #fff;
+  width: var(--lineWidth, 30rem);
+  height: 4px !important;
+  border-radius: 3px;
+  position: absolute;
+}
+
+.curruntTime,
+.totalTime {
+  font-size: 1.4rem;
+  font-family: "circular-normal";
+  color: #fff;
+}
+
+.player--right {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.player--right img {
+  width: 1.7rem;
+}
+
+.volume-line {
+  background-color: #fff;
+  width: 9rem;
+  height: 4px !important;
+  border-radius: 3px;
+}

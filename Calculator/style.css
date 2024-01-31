@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right,maroon,green,maroon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element{
+ background-color: #0059b3;
+  height: 56rem;
+  width: 40rem;
+  border-radius:1rem ;
+  filter: brightness(100%);
+}
+
+.inputDisplay{
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input{
+  height: 75%;
+  width: 90%;
+  background-color: white;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  outline: none;
+  border: none;
+  text-align: right;
+}
+
+
+.keyboardDisplay{
+  height: 40rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4,1fr);
+  
+}
+
+.btns--normal{
+  height: 6rem;
+  width: 6rem;
+  background-color: lightseagreen;
+  border-radius: 0.5rem;
+  text-align: center;
+  padding-top: 0.8rem;
+  color: white;
+  font-size: 3rem;
+  margin-inline-start: 2.2rem;
+}
+
+.btns--clear{
+  background-color: red;
+}
+
+.btns--equal{
+  background-color: green;
+  width: 90%;
+  height:90%;
+
+}
+
+.equalBtn{
+  height: 6rem;
+  width: 100%;
+}
+
+
+.btns--normal:active,
+.btns--clear:active {
+  transform: scale(0.95);
+}
+
+.btns--equal:active{
+  transform: scale(0.98);
+}

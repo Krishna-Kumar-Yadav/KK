@@ -1,0 +1,9 @@
+.playerSection{
+  height: 8rem;
+  width: 100%;
+  bottom: 0;
+  background-color: #131313;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}

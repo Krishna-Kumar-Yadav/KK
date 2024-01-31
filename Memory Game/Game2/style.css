@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  font-family: Cambria, Cochin, Georgia, 'Times New Roman', serif;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right,#036280,#378BA4,#81BECE,#036280,#378BA4);
+}
+
+.container{
+  height: 80%;
+  width: 80%;
+  background-image: linear-gradient(to left,#012E4A,#036280,#378BA4,#012E4A,#036280);
+  border-radius: 1rem;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  height: 20%;
+  width: 22%;
+  background-image: linear-gradient(to right,aqua,orange,green);
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  padding: 2rem 6rem;
+  font-size: 5rem;
+  color: white;
+  border-radius: 0.5rem;
+  filter: blur(0.95);
+  transform: rotateY(180deg);
+  animation: rotateAndHold 10s ease-in-out;
+  
+  
+}
+@keyframes rotateAndHold{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotateX(180deg);
+  }
+}
