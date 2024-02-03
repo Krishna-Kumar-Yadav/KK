@@ -29,7 +29,7 @@ body{
 }
 
 .musicTitle{
-  font-size: 3rem;
+  font-size: 2rem;
   color: antiquewhite;
   padding-left: 4rem;
   padding-top: 1rem;
@@ -42,9 +42,11 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20%;
 }
 
-.musicContainerBox{
+.musicContainerBox1,
+.musicContainerBox2{
   height: 96%;
   width: 28%;
   background-color: #131313;
@@ -139,4 +141,11 @@ body{
     to {
       transform: rotate(357deg);
     }
+  }
+
+  .filler{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    border-radius: 3rem;
   }
