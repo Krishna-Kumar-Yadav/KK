@@ -1,95 +1,111 @@
-document.querySelector(".reset--btn").addEventListener("click", shuffle);
+//intial declaration
 
-//Function to shuffle the div inside the div having class .container.
+const replayBtn = document.querySelector(".reset--btn");
+const divBoxes = document.querySelectorAll(".box");
+const container = document.querySelector(".container");
+const statusDiv = document.querySelector(".status");
 
-function shuffle() {
-  const container = document.querySelector(".container");
+//shuffle the divs
+
+function divShuffle() {
   const divs = Array.from(container.querySelectorAll(".box"));
-
-  //element will shuffle the div randomly
-  for (let i = divs.length - 1; i > 0; i--) {
+  for (i = divs.length - 1; i >= 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     container.insertBefore(divs[j], divs[i]);
   }
-  rotateBoxes();
 }
 
-//Function to rotate the all .box-Back class span to front and hold for few seconds.
+//add image on click
 
-function rotateBoxes() {
-  //element will rotate .box-Back class span for 10sec(5sec->show + 5sec->revert)
-
-  const boxes = document.querySelectorAll(".box-Back");
-  boxes.forEach((box) => {
-    box.classList.add("rotate"); // Apply the rotate class to each box
-    setTimeout(() => {
-      box.classList.remove("rotate"); // Remove the rotate class after 10 seconds
-    }, 10000);
-  });
-
-  //element will remove the visibility of .box-Front span for 6sec(3sec->show + 3sec->revert)
-
-  const visibility = document.querySelectorAll(".box-Front");
-  visibility.forEach((visible) => {
-    visible.classList.add("visibility");
-    setTimeout(() => {
-      visible.classList.remove("visibility"); // Apply the visibility for 10 sec
-    }, 10000);
-  });
-}
-
-//Function to rotate single span after click on span
-
-/* document.getElementById('1').addEventListener("click",turn);
-document.getElementById('2').addEventListener("click",turn);
-document.getElementById('3').addEventListener("click",turn);
-document.getElementById('4').addEventListener("click",turn);
-document.getElementById('5').addEventListener("click",turn);
-document.getElementById('6').addEventListener("click",turn);
-document.getElementById('7').addEventListener("click",turn);
-document.getElementById('8').addEventListener("click",turn);
-document.getElementById('9').addEventListener("click",turn);
-document.getElementById('10').addEventListener("click",turn);
-document.getElementById('11').addEventListener("click",turn);
-document.getElementById('12').addEventListener("click",turn);
-document.getElementById('13').addEventListener("click",turn);
-document.getElementById('14').addEventListener("click",turn);
-document.getElementById('15').addEventListener("click",turn); */
-
-/* let boxBack = document.querySelectorAll(".box-Back");
-
-
-function turnAndHold(element) {
-  element.classList.add("turn");
-  setTimeout(() => {
-    element.classList.remove("turn");
-  }, 10000);
-}
-  boxBack.forEach(box => {
-    boxBack.addEventListener("click",turnAndHold);
-  });
- */
-
-  const boxBacks = document.querySelectorAll('.box-Back');
-
-  let rotateTimeout;
-  
-  boxBacks.forEach(boxBack => {
-    boxBack.addEventListener('click', () => {
-      clearTimeout(rotateTimeout);
-      rotateBoxBacks();
-    });
-  });
-  
-  function rotateBoxBacks() {
-    boxBacks.forEach(boxBack => {
-      boxBack.classList.add('turn');
-    });
-  
-    rotateTimeout = setTimeout(() => {
-      boxBacks.forEach(boxBack => {
-        boxBack.classList.remove('turn');
-      });
-    }, 3000); // Change the time here to adjust the hold duration (in milliseconds)
+function addImg() {
+  for (let i = 0; i < divBoxes.length; i++) {
+    const box = divBoxes[i];
+    box.textContent = "";
+    if (i < 7) {
+      box.classList.add("imgBox", `img${i + 1}`);
+    } else if (i >= 7 && i < 14) {
+      box.classList.add("imgBox", `img${i - 6}`);
+    } else {
+      box.classList.add("imgBox", `img${i - 13}`);
+    }
   }
+}
+
+//remove Img
+
+function removeImg() {
+  for (let i = 0; i < divBoxes.length; i++) {
+    const box = divBoxes[i];
+    box.textContent = "🐇";
+    if (i < 7) {
+      box.classList.remove("imgBox", `img${i + 1}`);
+    } else if (i >= 7 && i < 14) {
+      box.classList.remove("imgBox", `img${i - 6}`);
+    } else {
+      box.classList.remove("imgBox", `img${i - 13}`);
+    }
+  }
+}
+
+//  show the Div
+
+function showDiv() {
+  for (let index = 0; index < divBoxes.length; index++) {
+    divBoxes[index].addEventListener("click", show);
+    function show() {
+      const box = divBoxes[index];
+      box.textContent = "";
+      if (index < 7) {
+        box.classList.add("imgBox", `img${index + 1}`);
+      } else if (index >= 7 && index < 14) {
+        box.classList.add("imgBox", `img${index - 6}`);
+      } else {
+        box.classList.add("imgBox", `img${index - 13}`);
+      }
+      matchDiv(index + 1);
+    }
+  }
+}
+
+//match the Div
+let A = []
+function matchDiv(id) {
   
+  if (id < 8) {
+    firstValue = id;
+    secondValue = id + 7;
+    thirdValue = id + 14;
+  } else if (id > 7 && id < 15) {
+    firstValue = id - 7;
+    secondValue = id;
+    thirdValue = id + 7;
+  } else if (id >= 15 && id < 22) {
+    firstValue = id - 14;
+    secondValue = id - 7;
+    thirdValue = id;
+  }
+  A.push(firstValue,secondValue,thirdValue)
+  if(id == A[0] || id == A[1] || id == A[2]){
+    console.log(A);
+    statusDiv.textContent = "Ohh ! You Won ! Great IQ"
+  }
+
+  else{
+    statusDiv.classList.add("status1");
+    statusDiv.textContent = "Sorry ! Try next time ! Need to work"
+    setTimeout(removeImg,3000)
+    
+  }
+}
+
+//function Calling
+
+showDiv();
+
+//add event listener
+
+replayBtn.addEventListener("click", function () {
+  divShuffle();
+  addImg();
+  setTimeout(removeImg, 1000);
+});
