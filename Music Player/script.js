@@ -23,7 +23,7 @@ function playButtonHandle() {
 }
 
 // Button disable logic
-let index = 8;
+let index = 15;
 let audio = null;
 let intervalId = null;
 let apiHandleRunning = false; // Flag to track whether API handle function is running
@@ -47,7 +47,7 @@ function playControl(musics) {
     playButtonHandle();
     audio.pause();
     clearInterval(intervalId); // Clear interval when paused
-    
+
   } else if (playButton.textContent === "Play_Circle") {
     stopButtonHandle();
     audio.play();
@@ -106,6 +106,7 @@ function apiHandle() {
         j++;
       } else {
         clearInterval(intervalId); 
+        
       }
     }, 1000);
   }

@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313;
+}
+
+
+
+.common--btn{
+  padding: 1rem 2rem;
+  gap: 3rem;
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 3rem;
+  height: 5rem;
+  width: 21rem;
+}
+
+.issue{
+  background-color: green;
+}
+
+.return{
+  background-color: red;
+}
+.check{
+  background-color: blue;
+}
+
+.check:active,
+.issue:active,
+.return:active{
+  transform: scale(0.95);
+}
+
+/*  Book -Issue Css*/
+
+
+.container{
+  height: 80%;
+  width: 70%;
+  background-image: linear-gradient(to right, #ff6347, #4b0082); 
+  display: grid;
+  grid-template-columns: 20% 80%;
+  font-size: 2rem;
+  color: white;
+  border-radius: 1rem;
+  padding-left: 11rem;
+  gap: 3rem;
+}
+
+input{
+  height: 2rem;
+  width: 21rem;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  padding-left: 3rem;
+
+}
+
+select{
+  height: 3rem;
+  width: 20rem;
+  outline: none;
+  border-radius: 0.5rem;
+  font-size: 2rem
+}

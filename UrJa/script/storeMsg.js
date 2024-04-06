@@ -168,7 +168,7 @@ function chatHandleClick() {
 
   function handleChatRecieve(contactId) {
     const messageRecieveObject = {
-      text: "",
+      text: "hi , Krishna",
       timeStamp: `${new Date().toLocaleTimeString({ hour: "2-digit" })}`,
     };
     if (

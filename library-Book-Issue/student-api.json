@@ -1,0 +1,104 @@
+{
+  "students": [
+    {
+      "rollNumber": "101",
+      "name": "John Doe",
+      "branch": "Computer Science"
+    },
+    {
+      "rollNumber": "102",
+      "name": "Jane Smith",
+      "branch": "Electrical Engineering"
+    },
+    {
+      "rollNumber": "103",
+      "name": "Michael Johnson",
+      "branch": "Mechanical Engineering"
+    },
+    {
+      "rollNumber": "104",
+      "name": "Emily Brown",
+      "branch": "Civil Engineering"
+    },
+    {
+      "rollNumber": "105",
+      "name": "William Davis",
+      "branch": "Information Technology"
+    },
+    {
+      "rollNumber": "106",
+      "name": "Olivia Wilson",
+      "branch": "Chemical Engineering"
+    },
+    {
+      "rollNumber": "107",
+      "name": "James Martinez",
+      "branch": "Aerospace Engineering"
+    },
+    {
+      "rollNumber": "108",
+      "name": "Sophia Anderson",
+      "branch": "Computer Science"
+    },
+    {
+      "rollNumber": "109",
+      "name": "Daniel Taylor",
+      "branch": "Electrical Engineering"
+    },
+    {
+      "rollNumber": "110",
+      "name": "Isabella Thomas",
+      "branch": "Mechanical Engineering"
+    },
+    {
+      "rollNumber": "111",
+      "name": "Ethan Jackson",
+      "branch": "Civil Engineering"
+    },
+    {
+      "rollNumber": "112",
+      "name": "Mia White",
+      "branch": "Information Technology"
+    },
+    {
+      "rollNumber": "113",
+      "name": "Alexander Harris",
+      "branch": "Chemical Engineering"
+    },
+    {
+      "rollNumber": "114",
+      "name": "Abigail Nelson",
+      "branch": "Aerospace Engineering"
+    },
+    {
+      "rollNumber": "115",
+      "name": "Matthew King",
+      "branch": "Computer Science"
+    },
+    {
+      "rollNumber": "116",
+      "name": "Emily Baker",
+      "branch": "Electrical Engineering"
+    },
+    {
+      "rollNumber": "117",
+      "name": "Emma Brooks",
+      "branch": "Mechanical Engineering"
+    },
+    {
+      "rollNumber": "118",
+      "name": "Noah Bell",
+      "branch": "Civil Engineering"
+    },
+    {
+      "rollNumber": "119",
+      "name": "Ava Reed",
+      "branch": "Information Technology"
+    },
+    {
+      "rollNumber": "120",
+      "name": "Liam Ward",
+      "branch": "Chemical Engineering"
+    }
+  ]
+}

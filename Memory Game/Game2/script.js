@@ -100,6 +100,7 @@ function matchDiv(idd) {
       A.includes(thirdValue)
     ) {
      
+      setTimeout(function (){
       const elementOne = document.querySelector(`#id${A[0]}`);
       const elementTwo = document.querySelector(`#id${A[1]}`);
       const elementThree = document.querySelector(`#id${A[2]}`);
@@ -107,6 +108,7 @@ function matchDiv(idd) {
       elementTwo.remove();
       elementThree.remove();
       A = []
+      },1000)
       
     }}
  if(A.length > 1 )  { 
@@ -114,8 +116,8 @@ function matchDiv(idd) {
     statusDiv.textContent = "OOPs ! Need to improve";
     statusDiv.classList.add("status1");
    setTimeout(function (){
-     divShuffle()
-     removeImg()
+    window.location.reload()
+     
    },2000)
    A = []
   }
@@ -125,8 +127,8 @@ if (A.length>2){
     statusDiv.textContent = "OOPs ! Need to improve";
     statusDiv.classList.add("status1");
    setTimeout(function (){
-     divShuffle()
-     removeImg()
+    window.location.reload()
+     
    },2000)
    A = []
   }
@@ -135,8 +137,8 @@ if (A.length>2){
     container.textContent = "You have Great IQ than Einstein";
     container.classList.add("status");
     setTimeout(function (){
-      divShuffle()
-      removeImg()
+      
+      window.location.reload()
     },2000)
   }
 }
@@ -148,8 +150,9 @@ showDiv();
 //add event listener
 
 replayBtn.addEventListener("click", function () {
+  
   divShuffle();
   addImg();
-  setTimeout(removeImg, 1000);
+  setTimeout(removeImg, 2000);
   statusDiv.textContent = ""
 });

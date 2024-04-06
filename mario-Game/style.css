@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  width : 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.common{
+  position: fixed;
+  height: 20rem;
+  width: 35rem;
+  background-color: #131313;
+  border-radius: 1rem;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnCommon{
+  outline: none;
+  background-color: green;
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.2rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.btnCommon:active{
+  transform: scale(0.95);
+}
+
+.result{
+  font-size: 3rem;
+}
