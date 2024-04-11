@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow: hidden;
+  background-color: #131313;
+  
+}
+
+.score{
+  margin: 1.5rem 3rem;
+  color: antiquewhite;
+  font-size: 1.5rem;
+  position: absolute;
+  z-index: 2;
+}
+
+canvas{
+  z-index: 1;
+}
+
+
+.container{
+  margin: 10rem 25rem;
+  position: fixed;
+  height: 20rem;
+  width: 35rem;
+  background-color: #131313;
+  border-radius: 1rem;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+
+}
+
+button{
+  outline: none;
+  background-color: green;
+  font-size: 3rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.2rem 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+button:active{
+  transform: scale(0.95);
+}
+
+.result{
+  color: white;
+  font-size: 3rem;
+}
+
