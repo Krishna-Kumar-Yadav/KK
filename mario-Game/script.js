@@ -216,10 +216,7 @@ platformArray = [
   new platform(3300, canvas.height - 100, platform1),
 ];
 
-setInterval(()=>{
-  leftPressed = false;
-  rightPressed = false;
-},500)
+
 
 function animate() {
   requestAnimationFrame(animate);
@@ -331,6 +328,16 @@ addEventListener("keydown", (event) => {
     }
     leftPressed = false;
     rightPressed = true;
+  }
+});
+
+addEventListener("keyup", (event) => {
+   if (event.key === "ArrowLeft") {
+    
+      leftPressed = false;
+    
+  } else if (event.key === "ArrowRight") {
+    rightPressed = false;
   }
 });
 
